@@ -32,16 +32,19 @@ namespace terminal_basicoCS
                 if (inputSobre == "nome")
                 {
                     Console.WriteLine("Desenvovido por: github.com/Matheus-assis05");
-                } else if (inputSobre == "lang")
+                } 
+                else if (inputSobre == "lang")
                 {
                     Console.WriteLine("C# .NET Console Application - Visual Studio 2022");
-                } else if (inputSobre == "desc")
+                } 
+                else if (inputSobre == "desc")
                 {
                     Console.WriteLine("Terminal simples com alguns comandos. A finalidade \n" +
                     "do projeto é revisar e fixar a sintaxe e funcionamento C# e aprender sobre classes e importações");
-                } else if (inputSobre == "voltar")
+                } 
+                else if (inputSobre == "voltar")
                 {
-                    break;
+                    break; //quebra este while loop  e volta para o anterior
                 }
                 else
                 {
@@ -49,6 +52,30 @@ namespace terminal_basicoCS
                 }
 
             }
+        }
+
+        public void cmdHora()
+        {
+            DateTime dthrLocal = DateTime.Now; //recebendo na variavel dthrLocal a hora atual do PC com a funcao DateTime.Now
+            
+            String dataFormatada = dthrLocal.ToString("dddd, dd/MM/yyyy HH:mm"); //formatando para "dia da semana, dia/mes/ano hora:minuto
+
+            Console.WriteLine(dataFormatada);
+        }
+
+        public void cmdVerJava(string url)
+        {
+            Console.WriteLine("Abrindo o link no navegador padrao...");
+            
+            try //tenta executar o comando para abrir url
+            { 
+            System.Diagnostics.Process.Start(url);
+            }
+            catch(Exception e) //Mostra o usuario se caso houver erro
+            {
+                Console.WriteLine(e.ToString());
+            }
+
         }
     }
 }

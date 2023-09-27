@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +15,10 @@ namespace terminal_basicoCS {
             // Repositório de referência: https://github.com/Matheus-Assis05/Java-primeiro-projeto-terminal
             // Apenas um teste para ver se a estrutura básica funciona no C#
             /* To Do:
-            * - Adicionar os comandos listados em help. 
-            * - Criar o submenu "sobre". 
+            * - Adicionar os comandos listados em help.  (FEITO)
+            * - Criar o submenu "sobre". (FEITO)
             * - Criar uma forma do programa funcionar como um terminal e um comando de quit (FEITO)
-            * - Criar a opçâo que permite o usuario consultar a data e hora 
+            * - Criar a opçâo que permite o usuario consultar a data e hora  (FEITO)
             */
 
             Console.WriteLine("***************************************************************************************\n" +
@@ -44,9 +45,17 @@ namespace terminal_basicoCS {
                 {
                     menu.cmdSobre();
                 }
+                else if(input == "versaojava")
+                {
+                    menu.cmdVerJava("https://github.com/Matheus-Assis05/Java-primeiro-projeto-terminal");
+                }
+                else if(input == "hora")
+                {
+                    menu.cmdHora(); 
+                }
                 else if(input == "quit")
                 {
-                    Console.WriteLine("aperte ENTER para sair.");
+                    Console.WriteLine("Pressione ENTER para sair.");
                     break;
                 }                
             }
