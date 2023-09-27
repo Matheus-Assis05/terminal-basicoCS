@@ -22,8 +22,8 @@ namespace terminal_basicoCS {
             */
 
             Console.WriteLine("***************************************************************************************\n" +
-                    "Desenvolvido por Matheus Martins usando Java 21. Obviamente Direitos nao Resevados\n" +
-                    "Terminal Simples em java - 23/09/2023\n" + 
+                    "Desenvolvido por Matheus Martins usando C# .NET Obviamente Direitos nao Resevados\n" +
+                    "Terminal Simples em C# - 27/09/2023\n" + 
                     "***************************************************************************************\n\n" +
                     "  digite 'help' para ver a lista de comandos\n"); 
 
